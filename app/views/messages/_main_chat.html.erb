@@ -8,13 +8,9 @@
 </div>
 
 <div class="messages">
-  <h4 class="name">Tom</h4>
-  <em class="post-date">2020/3/31(wed) 12:43:30</em>
-  <h4 class="text">おはよう</h4>
-  <h4 class="name">Sim</h4>
-  <em class="post-date">2020/3/31(wed) 12:43:30</em>
-</div>
-
+  <%= render partial: 'message', collection: @messages %>
+  </div>
+  
 <%= form_with model: [@room,@message], class: 'form', local: true do |f| %>
     <div class="form-input">
     <%= f.text_field :content, class: 'form-^message',placeholder: 'type a message' %>
